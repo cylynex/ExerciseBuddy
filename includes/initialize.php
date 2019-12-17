@@ -1,6 +1,11 @@
 <?php
+ob_start();
 
-include("database.php");
+// Config
+include("includes/database.php");
+
+// Classes
+include("classes/Database.php");
 
 
 
