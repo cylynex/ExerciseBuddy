@@ -50,7 +50,7 @@ if (isset($urlVariables[8])) { $url4 = $urlVariables[8]; }
 if (!$url1) { include("pages/home.php"); }
 if ($url1 == "AddExercise") { include("pages/addexercise.php"); }
 if ($url1 == "ViewExercises") { include("pages/viewexercises.php"); }
-
+if ($url1 == "Users") { include ("pages/users.php"); }
 
 
 ?>
