@@ -66,7 +66,7 @@ class Database {
 			</script>
 			<?php
 			return;
-		} else { echo "added successfully<br>"; }			
+		} 		
 	}	
 	
 	

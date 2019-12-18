@@ -30,7 +30,7 @@ if (isset($urlVariables[7])) { $url7 = globalizeurl(7,$urlVariables); }
 if (isset($urlVariables[8])) { $url8 = globalizeurl(8,$urlVariables); }	
 
 if ((!$url1) || ($url1 == "") || ($url1 == " ")) { 
-	$url1 = "home";
+	$url1 = "Home";
 } else if ($url1 == "404") {
 	// 404 do nothing.
 }
@@ -48,9 +48,11 @@ if (isset($urlVariables[8])) { $url4 = $urlVariables[8]; }
 
 // Pages
 if (!$url1) { include("pages/home.php"); }
+if ($url1 == "Login") { include("pages/login.php"); }
 if ($url1 == "AddExercise") { include("pages/addexercise.php"); }
 if ($url1 == "ViewExercises") { include("pages/viewexercises.php"); }
 if ($url1 == "Users") { include ("pages/users.php"); }
+if ($url1 == "Home") { include ("pages/home.php"); }
 
 
 ?>
