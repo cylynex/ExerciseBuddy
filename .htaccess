@@ -1,0 +1,16 @@
+Options +FollowSymlinks
+Options -Indexes
+RewriteEngine on
+
+#RewriteCond %{QUERY_STRING} ^page_id=4191$
+#RewriteRule ^ /Customer-Loyalty? [R=301,L]
+
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . index.php [L]
+
+<IfModule php5_module>
+    php_flag session.cookie_httponly on
+</IfModule>
