@@ -11,7 +11,7 @@ if ($url2 == "Universal") {
 
 // Show Routine Details
 if ($url2 == "View") {
-	echo "show the routine here.";
+	$routines->ViewRoutine();
 }
 
 else { ShowMenu(); }
