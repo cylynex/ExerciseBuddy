@@ -5,6 +5,7 @@ ob_start();
 include("includes/database.php");
 
 // Classes
+include("classes/Rewrite.php");
 include("classes/Database.php");
 include("classes/Exercises.php");
 include("classes/Users.php");

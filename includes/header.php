@@ -8,7 +8,7 @@ include("includes/initialize.php");
 <head>
 	<meta charset="UTF-8">
 	<title>Exercise Buddy v1</title>
-	<link href="css/main.css" rel="stylesheet">
+	<link href="/css/main.css" rel="stylesheet">
 	
 	
 	
