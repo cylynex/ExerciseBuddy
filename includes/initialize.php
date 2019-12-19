@@ -8,6 +8,7 @@ include("includes/database.php");
 include("classes/Database.php");
 include("classes/Exercises.php");
 include("classes/Users.php");
+include("classes/Routines.php");
 
 // Check for login
 if ($_POST['login']) { $users->CheckLoginInfo(); }

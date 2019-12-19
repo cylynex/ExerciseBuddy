@@ -20,15 +20,6 @@ function globalizeurl($urlloc,$urlVariables) {
 	return $url;
 }
 
-if (isset($urlVariables[1])) { $url1 = globalizeurl(1,$urlVariables); }
-if (isset($urlVariables[2])) { $url2 = globalizeurl(2,$urlVariables); }	
-if (isset($urlVariables[3])) { $url3 = globalizeurl(3,$urlVariables); }	
-if (isset($urlVariables[4])) { $url4 = globalizeurl(4,$urlVariables); }	
-if (isset($urlVariables[5])) { $url5 = globalizeurl(5,$urlVariables); }	
-if (isset($urlVariables[6])) { $url6 = globalizeurl(6,$urlVariables); }	
-if (isset($urlVariables[7])) { $url7 = globalizeurl(7,$urlVariables); }	
-if (isset($urlVariables[8])) { $url8 = globalizeurl(8,$urlVariables); }	
-
 if ((!$url1) || ($url1 == "") || ($url1 == " ")) { 
 	$url1 = "Home";
 } else if ($url1 == "404") {
@@ -36,7 +27,7 @@ if ((!$url1) || ($url1 == "") || ($url1 == " ")) {
 }
 
 
-// Bypass for now to skip sanitization
+// Bypass globalizeurl function for now to skip sanitization
 if (isset($urlVariables[1])) { $url1 = $urlVariables[1]; }
 if (isset($urlVariables[2])) { $url2 = $urlVariables[2]; }	
 if (isset($urlVariables[3])) { $url3 = $urlVariables[3]; }	
@@ -53,6 +44,6 @@ if ($url1 == "AddExercise") { include("pages/addexercise.php"); }
 if ($url1 == "ViewExercises") { include("pages/viewexercises.php"); }
 if ($url1 == "Users") { include ("pages/users.php"); }
 if ($url1 == "Home") { include ("pages/home.php"); }
-
+if ($url1 == "Routines") { include ("pages/routines.php"); }
 
 ?>
