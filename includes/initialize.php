@@ -10,6 +10,7 @@ include("classes/Database.php");
 include("classes/Exercises.php");
 include("classes/Users.php");
 include("classes/Routines.php");
+include("classes/Workout.php");
 
 // Check for login
 if ($_POST['login']) { $users->CheckLoginInfo(); }

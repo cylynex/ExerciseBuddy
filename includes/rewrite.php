@@ -45,5 +45,6 @@ if ($url1 == "ViewExercises") { include("pages/viewexercises.php"); }
 if ($url1 == "Users") { include ("pages/users.php"); }
 if ($url1 == "Home") { include ("pages/home.php"); }
 if ($url1 == "Routines") { include ("pages/routines.php"); }
+if ($url1 == "Workout") { include ("pages/workout.php"); }
 
 ?>

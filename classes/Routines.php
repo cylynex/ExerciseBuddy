@@ -41,7 +41,7 @@ class Routines extends Database {
 		echo "<p>".$routineOverviewData['routineDescription']."</p>";
 		
 		foreach ($routineData as $thisExercise) {
-			echo $thisExercise['exerciseName']."<br>";
+			echo $thisExercise['exerciseName'] ." [x".$thisExercise['reReps']."]<br>";
 		}
 	}
 	

@@ -30,8 +30,16 @@ class Exercises extends Database {
 		echo mysqli_num_rows($allExercises) . " total exercises in the system.<br><br>";
 		while ($exercises = $this->Assoc($allExercises)) {
 			echo $exercises['exerciseName']." - ".$exercises['typeName']."<br>";
+		}		
+	}
+	
+	
+	// Selector for picking an exercise
+	public function ShowExercisesSelector() {
+		$allExercises = $this->Query ("SELECT * FROM exercises ORDER BY exerciseName ASC ");
+		while($exs = $this->Assoc($allExercises)) {
+			?><option value="<?php echo $exs['id']?>"><?php echo $exs['exerciseName']; ?></option><?php
 		}
-		
 	}
 	
 }
