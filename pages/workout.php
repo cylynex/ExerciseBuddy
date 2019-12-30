@@ -4,12 +4,9 @@
 <?php
 $urls = $rewrite->GetUrlVariables();
 
-// Start a new workout
-if ($url2 == "New") { 
-	
-	$workout->NewWorkout();
-	
-}
+// Interpret the URL
+if ($url2 == "New") { $workout->NewWorkout(); } // Start a New Workout
+else if ($url2 == "Current") { $workout->ActiveWorkout(); } // Active workout - go!
 
 else { 
 
