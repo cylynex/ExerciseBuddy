@@ -1,3 +1,10 @@
+<script>
+function UpdateLineItem() {
+	alert("Updating...");
+}
+
+</script>
+
 <?php
 
 class Workout extends Database {
@@ -64,11 +71,22 @@ class Workout extends Database {
 			$workoutData = $this->Assoc($workoutDataQ);
 			
 			// Display workout header info
-			echo "Workout ID $workoutID started at $workoutData[startTime]. ";
+			echo "Workout ID $workoutID started at $workoutData[startTime]. <br><br>";
 			
 			// Display exercises
+			?>
+			<table border="1">
+			<tr>
+				<th>Exercise</th>
+				<th>Weight</th>
+				<th>Reps</th>
+				<th>Actions</th>
+			</tr>
+			<?php
 			$this->ShowExercisesInWorkout($workoutID);
-
+			
+			?></table><?php
+			
 			// Show add new exercise thingy
 			$this->AddExercise();
 
@@ -91,10 +109,28 @@ class Workout extends Database {
 		if (mysqli_num_rows($weDataQ) == 0) {
 			echo "No exercises found yet";
 		} else {
-			while ($weData = $this->Assoc($weDataQ)) {
-				echo "<p>".$weData['exerciseName']."</p>";
+			while ($weData = $this->Assoc($weDataQ)) {				
+				$this->ExerciseLineItem($weData);				
 			}
 		}
+	}
+	
+	
+	// Displays the Line items in an exercise complete with form to update / add more
+	private function ExerciseLineItem($lineItem) {
+		?>
+		<form method="post" action="">
+		<tr>
+			<td><?php echo $lineItem['exerciseName']; ?></td>
+			<td><input type="text" name="weWeight"></td>
+			<td><input type="text" name="weReps"></td>
+			<td>
+				<input type="submit" value="Update" onclick="UpdateLineItem();">
+				<button onclick="alert('Need Ajax function to remove entry here');">Remove</button>
+			</td>
+		</tr>
+		</form>
+		<?php
 	}
 		
 	
